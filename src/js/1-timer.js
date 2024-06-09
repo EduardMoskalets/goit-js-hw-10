@@ -110,7 +110,7 @@ startButton.disabled = true;
 });
 
 
-//  расчет от какой даты до конечной 
+//  необходим расчет от какой даты до конечной 
 function startCountdown(endDate) {
 clearInterval(countdownInterval);
 countdownInterval = setInterval(function() {
@@ -131,7 +131,7 @@ if (distance <= 0) {
     }, 1000);
 }
 
-//  онеобходимо выводить значение остатка
+//  необходимо выводить значение остатка
 function updateTimer(days, hours, minutes, seconds) {
     daysSpan.textContent = formatTime(days);
     hoursSpan.textContent = formatTime(hours);
