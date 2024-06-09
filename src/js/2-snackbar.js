@@ -2,7 +2,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 //  необходимо найти селектор добавить слушателя 
-document.querySelector('.form').addEventListener('submit', (event) => {
+document.querySelector('.form').addEventListener('submit', function(event) {
     event.preventDefault();
 
 // Получаем значения и состояние 
@@ -10,7 +10,7 @@ document.querySelector('.form').addEventListener('submit', (event) => {
     const state = event.target.elements.state.value;
 
 //  создаем Промисс и неоьходима проверка 
-    const promis = new Promise((resolve, reject) => {
+    const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             if (state === 'fulfilled') {
                 resolve(delay);
@@ -20,7 +20,7 @@ document.querySelector('.form').addEventListener('submit', (event) => {
         }, delay);
     });
 
-// Обработка результата промисса при помощи библиотеки ( необходимо )
+// Обработка результата промисса при помощи библиотеки ( необходимо чтоб выводилось уведомление )
     promise
         .then((result) => {
             iziToast.success({
