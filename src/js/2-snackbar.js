@@ -27,7 +27,7 @@ document.querySelector('.form').addEventListener('submit', function(event) {
                 title: 'Success',
                 message: `Fulfilled promise in ${result}ms`
             });
-    })
+        })
         .catch((error) => {
             iziToast.error({
                 title: 'Error',
